@@ -1,0 +1,50 @@
+****************************************************
+Abir Abbas         						     0955448
+CIS3110 - Assignment 1
+2018-01-27                        abbasa@uoguelph.ca
+****************************************************
+
+Note : Bonus of adding CD was included in my shell!
+
+************
+Compilation
+************
+make - compiles everything
+
+make clean - cleans everything
+***********************
+Running the program(s)
+***********************
+./msh - runs the program
+
+*****************
+My command
+*****************
+hash (parameters)
+
+Description : Takes in any number of strings as parameters and assigns them a somewhat unique integer value and outputs them in order of entry
+
+Example : 
+Input : hash tomato potato tornado
+Output :
+tomato = 2959
+potato = 2979
+tornado = 3741
+
+Known limitations : 
+- Certain strings will return the same hash as each other
+- Will hash strings individually unless put into quotations
+- symbols are not given unique values 
+
+Error checking :
+- Will say invalid syntax if nothing is inputted
+- Does not hash symbols, only characters
+
+
+*****************
+Paragraph
+*****************
+The algorithm I used follows the method provided in the textbook where, it checks for any of the user created functions we were assignmed to do, so "add", "args", "hash" and calls those accordingly,
+otherwise it checks for ">", "<", "&" operators within the parameters. If the <,>,& symbols are found prepare the system accordingly, ie : > prepares stdout to a file intsead of screen, < prepares 
+stdin from a file, & prepares a signal interrupt to exit when the background process is done, but it doesn't block for the command it leaves it running in the background and moves to next statement. 
+otherwise if none of the specified symbols are present the program just calls execvp with the command and paramanetsr (if any) and loops till user types exit.
